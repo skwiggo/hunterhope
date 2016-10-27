@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  venue: MyString
+  lat: 1.5
+  long: 1.5
+  otherbands: MyString
+  date: 2016-10-27 21:13:16
+
+two:
+  venue: MyString
+  lat: 1.5
+  long: 1.5
+  otherbands: MyString
+  date: 2016-10-27 21:13:16

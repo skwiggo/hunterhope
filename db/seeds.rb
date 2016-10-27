@@ -8,6 +8,10 @@
 
 Blogpost.delete_all()
 Song.delete_all()
+Tourdate.delete_all()
 
 Blogpost.create({newpost: "Incoming news about future releases and tour dates imminent. Stay tuned!" })
+
 Song.create({name: "Decade", lyrics: "We came from hope, a decade of scars across my throat. I don't know what to say to you.", spotify: "https://play.spotify.com/track/0x1VUhVLxtdiEHNSlq9mFB", itunes: "https://itunes.apple.com/us/album/decade-ep/id1057190368"})
+
+Tourdate.create({venue: "PJ Molloys, Dunfermline", lat: 56.070396, long: -3.461226, otherbands: "The Dan Collins Band", date: "2017-01-05 19:00:00" })
