@@ -1,36 +1,23 @@
-angular.module('hunterHope', ['ui.router'])
-.config([
-'$stateProvider',
-'$urlRouterProvider',
-function($stateProvider, $urlRouterProvider) {
-
-  $stateProvider
-    .state('home', {
-      url: '/blog',
-      templateUrl: '/blog.html',
-      controller: 'MainCtrl'
-    });
-
-  $urlRouterProvider.otherwise('blog');
-}])
-
-.factory('posts', [function(){
+angular.module('hunterHope', [])
+ 
+.factory('blogPosts', [function(){
   var o = {
-    posts: []
+    posts: [
+      {title: "Hi everyone!"}
+    ]
   };
   return o;
-}])
+}]);
 
 .controller('MainCtrl', [
-'$scope','posts'
-function($scope, posts){
-  $scope.posts = posts.posts
-  }  
-  ];
-  
+'$scope',
+'blogPosts',
+function($scope, blogPosts){
+  $scope.posts = blogPosts.posts
   $scope.addPost = function(){
     $scope.posts.push({title: $scope.title});
     $scope.title = '';
     if(!$scope.title || $scope.title === '') { return; }
   };
+  }]; 
 );

@@ -1,15 +1,15 @@
 <html>
   <head>
     <title>Hunter/Hope</title>
-    <script src="lib/angular.js"></script>
-     <script src="lib/angular-ui-router.js"></script>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="app.js"></script>
   </head>
   
 <!--   Angular + HTML -->
 
   <body ng-app="hunterHope" ng-controller="MainCtrl">
-    <script type="text/ng-template" id="/blog.html">
+
       <div class="page-header">
         <h1>Hunter/Hope</h1>
       </div>
@@ -22,8 +22,9 @@
         <input type="text" ng-model="title"></input>
         <button type="submit">Post</button>
       </form>
+    
+      
       <ui-view></ui-view>
 
-    </script>
   </body>
 </html>
