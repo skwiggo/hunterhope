@@ -1,18 +1,17 @@
 <html>
   <head>
     <title>Hunter/Hope</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+    <script src="lib/angular.js"></script>
+     <script src="lib/angular-ui-router.js"></script>
     <script src="app.js"></script>
   </head>
   
 <!--   Angular + HTML -->
 
-  <body ng-app="hunterHope">
-    
+  <body ng-app="hunterHope" ng-controller="MainCtrl">
     <script type="text/ng-template" id="/blog.html">
       <div class="page-header">
-        <h1>Blog</h1>
+        <h1>Hunter/Hope</h1>
       </div>
 
       <div ng-repeat="post in posts">
@@ -24,7 +23,7 @@
         <button type="submit">Post</button>
       </form>
       <ui-view></ui-view>
-      <!-- rest of template -->
+
     </script>
   </body>
 </html>

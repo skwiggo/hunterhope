@@ -5,7 +5,7 @@ angular.module('hunterHope', ['ui.router'])
 function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
-    .state('blog', {
+    .state('home', {
       url: '/blog',
       templateUrl: '/blog.html',
       controller: 'MainCtrl'
