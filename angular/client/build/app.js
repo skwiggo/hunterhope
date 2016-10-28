@@ -1,23 +1,18 @@
-angular.module('hunterHope', [])
- 
-.factory('blogPosts', [function(){
-  var o = {
-    posts: [
-      {title: "Hi everyone!"}
-    ]
-  };
-  return o;
-}]);
+angular.module('hunterHope', []) 
 
-.controller('MainCtrl', [
-'$scope',
-'blogPosts',
-function($scope, blogPosts){
-  $scope.posts = blogPosts.posts
-  $scope.addPost = function(){
-    $scope.posts.push({title: $scope.title});
-    $scope.title = '';
-    if(!$scope.title || $scope.title === '') { return; }
+angular.module('hunterHope').factory('blogPosts', [function(){
+  var blogPosts = {}
+
+  var blogPosts.list = []
+  
+  blogPosts.add = function(message){
+    blogPosts.push({text: message});
   };
-  }]; 
-);
+
+  return blogPosts 
+}])
+
+.controller('MainCtrl', function(blogPosts) {
+  var self = this;
+  self.blogPosts = blogPosts.list
+})
