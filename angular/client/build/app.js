@@ -1,18 +1,15 @@
 angular.module('hunterHope', []) 
-
-angular.module('hunterHope').factory('blogPosts', [function(){
-  var blogPosts = {}
-
-  var blogPosts.list = []
-  
-  blogPosts.add = function(message){
-    blogPosts.push({text: message});
-  };
-
-  return blogPosts 
-}])
-
-.controller('MainCtrl', function(blogPosts) {
-  var self = this;
-  self.blogPosts = blogPosts.list
+.factory('posts', function() {
+  var posts = {posts: [{text: 'Hello'}, {text: 'Woohoo'}]};
+  return posts
 })
+
+.controller('MainCtrl', ['$scope', 'posts',
+  function($scope, posts) {
+    $scope.posts = posts.posts
+    $scope.addPost = function() {
+      $scope.posts.push({text: $scope.text})
+    }
+  }  
+]);
+
