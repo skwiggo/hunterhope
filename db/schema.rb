@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161028092827) do
+ActiveRecord::Schema.define(version: 20161030212435) do
 
   create_table "blogposts", force: :cascade do |t|
     t.text     "newpost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "title"
+  end
+
+  create_table "releases", force: :cascade do |t|
+    t.string   "name"
+    t.string   "cover"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,14 +34,17 @@ ActiveRecord::Schema.define(version: 20161028092827) do
     t.string   "itunes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "release_id"
   end
+
+  add_index "songs", ["release_id"], name: "index_songs_on_release_id"
 
   create_table "tourdates", force: :cascade do |t|
     t.string   "venue"
     t.float    "lat"
     t.float    "long"
     t.string   "otherbands"
-    t.datetime "date"
+    t.text     "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -21,19 +21,29 @@
 
   <script type="text/ng-template" id="/blog.html">
     <div ng-repeat="post in posts">
-      {{post.newpost}}
+      <h2>{{post.title}}</h2>
+      <p>{{post.newpost}}</p>
     </div>
   </script>
 
   <script type="text/ng-template" id="/music.html">
-    <div ng-repeat="song in songs">
+    
+    <div ng-repeat="release in releases">
       <li>
+        <ul>{{release.name}}</ul>
+          <ul><img src="{{release.cover}}"></ul>
+      </li>
+      <li ng-repeat="song in release.songs">
         <ul>{{song.name}}</ul>
         <ul>Lyrics: {{song.lyrics}}</ul>
         <ul><a href="{{song.spotify}}">Listen on Spotify</a></ul>
         <ul><a href="{{song.itunes}}">Buy on iTunes</a></ul>
       </li>
-    </div>
+      </div>
+    
+    
+     
+   
   </script>
 
   <script type="text/ng-template" id="/tour.html">
