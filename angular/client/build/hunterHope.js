@@ -1,4 +1,4 @@
-angular.module('blogPosts', ['ui.router']) 
+angular.module('hunterHope', ['ui.router']) 
 
 .config([
 '$stateProvider',

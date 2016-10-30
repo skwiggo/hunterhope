@@ -2,27 +2,22 @@
   <head>
     <title>Hunter/Hope</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
-    <script src="blogPosts.js"></script>
+    <script src="hunterHope.js"></script>
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
   </head>
   
-  <body ng-app="blogPosts" ng-controller="BlogCtrl">
+  <body ng-app="hunterHope">
+
+  <h1>Hunter/Hope</h1>
 
   <script type="text/ng-template" id="/blog.html">
-    
-    <div class="page-header">
-       <h1>Hunter/Hope</h1>
-     </div>
-
     <div ng-repeat="post in posts">
       {{post.newpost}}
     </div>
   </script>
-
-  <ui-view></ui-view>
-
  
 
-           
+  <ui-view></ui-view>
+         
   </body>
 </html>
