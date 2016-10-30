@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class TourdateTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "Tourdates have a venue" do
+  assert_equal("PJ Molloys", tourdates(:one).venue)
+  end
 end

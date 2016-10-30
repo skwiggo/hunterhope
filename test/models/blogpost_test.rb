@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class BlogpostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "Blogposts have a newpost" do
+  assert_equal("Hello!", blogposts(:one).newpost)
+  end
 end

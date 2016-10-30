@@ -1,13 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Shoebox
   lyrics: MyString
   spotify: MyString
   itunes: MyString
 
-two:
-  name: MyString
-  lyrics: MyString
-  spotify: MyString
-  itunes: MyString
+

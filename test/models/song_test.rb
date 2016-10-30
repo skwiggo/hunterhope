@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class SongTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "Songs have a name" do
+  assert_equal("Shoebox", songs(:one).name)
+  end
 end

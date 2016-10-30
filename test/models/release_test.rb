@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ReleaseTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "Releases have a name" do
+  assert_equal("Decade EP", releases(:one).name)
+  end
 end
