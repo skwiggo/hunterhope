@@ -24,13 +24,18 @@
 
   <script type="text/ng-template" id="/music.html">
     <div ng-repeat="song in songs">
-      {{song.name}}
+      <p>{{song.name}}</p><br>
+      <p>Lyrics: {{song.lyrics}}</p><br>
+      <a href="{{song.spotify}}">Listen on Spotify</a><br>
+      <a href="{{song.itunes}}">Buy on iTunes</a><br>
     </div>
   </script>
 
   <script type="text/ng-template" id="/tour.html">
     <div ng-repeat="date in tourDates">
-      {{date.venue}}
+      <p>Date: {{date.date}}</p>
+      <p>Venue: {{date.venue}}</p>
+      <p>With: {{date.otherbands}}</p>
     </div>
   </script>
  
