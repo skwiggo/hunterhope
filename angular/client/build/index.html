@@ -27,21 +27,17 @@
   </script>
 
   <script type="text/ng-template" id="/music.html">
-    
     <div ng-repeat="release in releases">
       <li >
-        <ul>{{release.name}}</ul>
+        <ul><a ng-click="isSongListOpen = !isSongListOpen">{{release.name}}</a></ul>
           <ul><img src="{{release.cover}}"></ul>
-          <li ng-repeat="song in release.songs">
-            <ul>{{song.name}}</ul>
-            <ul>Lyrics: {{song.lyrics}}</ul>
-            <ul><a href="{{song.spotify}}">Listen on Spotify</a></ul>
-            <ul><a href="{{song.itunes}}">Buy on iTunes</a></ul>
+          <li ng-show="isSongListOpen" ng-repeat="song in release.songs">
+            <ul ng-click="isSongOpen = !isSongOpen">{{song.name}}</ul>
+            <ul ng-show="isSongOpen">Lyrics: {{song.lyrics}}</ul>
+            <ul ng-show="isSongOpen"><a href="{{song.spotify}}">Listen on Spotify</a></ul>
+            <ul ng-show="isSongOpen"><a href="{{song.itunes}}">Buy on iTunes</a></ul>
           </li>
       </li>
-
-     
-     
       </div>
   
   </script>
