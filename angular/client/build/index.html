@@ -10,6 +10,12 @@
 
   <h1>Hunter/Hope</h1>
 
+  <div>
+    <a ui-sref="blog">Blog</a>
+    <a ui-sref="music">Music</a>
+    <a ui-sref="tour">Tour</a>
+  </div>
+
   <script type="text/ng-template" id="/blog.html">
     <div ng-repeat="post in posts">
       {{post.newpost}}
@@ -18,13 +24,13 @@
 
   <script type="text/ng-template" id="/music.html">
     <div ng-repeat="song in songs">
-      {{songs.name}}
+      {{song.name}}
     </div>
   </script>
 
   <script type="text/ng-template" id="/tour.html">
-    <div ng-repeat="date in tourdates">
-      {{tourdates.venue}}
+    <div ng-repeat="date in tourDates">
+      {{date.venue}}
     </div>
   </script>
  
