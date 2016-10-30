@@ -6,23 +6,20 @@ angular.module('blogPosts', ['ui.router'])
 function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
-    .state('home', {
-      url: '/home',
-      template: '/home.html',
+    .state('blog', {
+      url: '/blog',
+      templateUrl: '/blog.html',
       controller: 'BlogCtrl'
     });
 
-  $urlRouterProvider.otherwise('home');
+  $urlRouterProvider.otherwise('blog');
 }])
 
-.factory('posts', function() {
-  var posts = {posts: [{text: 'Hello'}, {text: 'Woohoo'}]};
-  return posts
-})
-
-.controller('BlogCtrl', ['$scope', 'posts',
-  function($scope, posts) {
-    $scope.posts = posts.posts
+.controller('BlogCtrl', ["$scope", "$http", function($scope, $http) {
+    $http.get("http://localhost:5000/blogposts")
+    .then(function(response) {
+        $scope.posts = response.data;
+    });
   }  
 ]);
 
