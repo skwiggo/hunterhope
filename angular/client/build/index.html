@@ -15,6 +15,18 @@
       {{post.newpost}}
     </div>
   </script>
+
+  <script type="text/ng-template" id="/music.html">
+    <div ng-repeat="song in songs">
+      {{songs.name}}
+    </div>
+  </script>
+
+  <script type="text/ng-template" id="/tour.html">
+    <div ng-repeat="date in tourdates">
+      {{tourdates.venue}}
+    </div>
+  </script>
  
 
   <ui-view></ui-view>
