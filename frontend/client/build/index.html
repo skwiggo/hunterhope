@@ -40,16 +40,14 @@
   </script>
 
   <script type="text/ng-template" id="/tour.html">
-    <div ng-repeat="date in tourDates">
+    <div ng-repeat="tourDate in tourDates">
       <li>
-        <ul>Date: {{date.date}}</ul>
-        <ul>Venue: {{date.venue}}</ul>
-        <ul>With: {{date.otherbands}}</ul>
-        <ng-map id="map" center="[{{date.lat}}, {{date.long}}]"><marker position="{{date.lat}}, {{date.long}}">
-    </marker></ng-map>
+        <ul ng-click="isDateOpen = !isDateOpen">{{tourDate.venue}}, {{tourDate.date}}</ul>
+        <ul ng-show="isDateOpen">With: {{tourDate.otherbands}}</ul>
+        <ng-map ng-show="isDateOpen" id="map" center="[{{tourDate.lat}}, {{tourDate.long}}]">
+        <marker position="{{tourDate.lat}}, {{tourDate.long}}"></marker>
+        </ng-map>
       </li>
-
-      
 
     </div>
   </script>
