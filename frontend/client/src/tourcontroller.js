@@ -3,10 +3,7 @@ angular.module('hunterHope').controller('TourCtrl', ["$scope", "$http", 'NgMap',
       .then(function(response) {
           $scope.tourDates = response.data;
       })
-        $scope.map = NgMap.getMap('map')
-        $scope.redraw = function() {
-          google.maps.event.trigger($scope.map,'resize')
-        }
+        $scope.map = NgMap.getMap('map');
     }
   ]);
 
