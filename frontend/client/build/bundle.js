@@ -78,6 +78,12 @@
 	  $urlRouterProvider.otherwise('blog');
 	}])
 	
+	.filter('spotifyUrl', function ($sce) {
+	    return function(spotifyId) {
+	      return $sce.trustAsResourceUrl('https://embed.spotify.com/?uri=spotify:track:' + spotifyId);
+	    };
+	  });
+	
 	__webpack_require__(5);
 	__webpack_require__(6);
 	__webpack_require__(7);
@@ -36471,7 +36477,6 @@
 	      .then(function(response) {
 	          $scope.releases = response.data; 
 	      });
-	      $scope.mySong =  $sce.trustAsResourceUrl("https://embed.spotify.com/")
 	    }  
 	  ]);
 	

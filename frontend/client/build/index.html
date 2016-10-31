@@ -28,10 +28,10 @@
       <li >
         <ul><a ng-click="isSongListOpen = !isSongListOpen">{{release.name}}</a></ul>
           <ul><img src="{{release.cover}}"></ul>
-          <li ng-show="isSongListOpen" ng-repeat="song in release.songs" ng-init="mySong=song.spotify">
+          <li ng-show="isSongListOpen" ng-repeat="song in release.songs">
             <ul ng-click="isSongOpen = !isSongOpen">{{song.name}}</ul>
             <ul ng-show="isSongOpen">Lyrics: {{song.lyrics}}</ul>
-            <ul ng-show="isSongOpen"><iframe ng-src="<https://embed.spotify.com/?uri=spotify:track:{{mySong}}" height="380" frameborder="0" allowtransparency="true"></iframe></ul>
+            <ul ng-show="isSongOpen"><iframe ng-src="{{song.spotify | spotifyUrl}}" height="380" frameborder="0" allowtransparency="true"></iframe></ul>
             <ul ng-show="isSongOpen"><a href="{{song.itunes}}">Buy on iTunes</a></ul>
           </li>
       </li>

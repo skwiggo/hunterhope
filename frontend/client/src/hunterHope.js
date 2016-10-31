@@ -32,6 +32,12 @@ function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('blog');
 }])
 
+.filter('spotifyUrl', function ($sce) {
+    return function(spotifyId) {
+      return $sce.trustAsResourceUrl('https://embed.spotify.com/?uri=spotify:track:' + spotifyId);
+    };
+  });
+
 require("./blogcontroller");
 require("./musiccontroller");
 require("./tourcontroller");
