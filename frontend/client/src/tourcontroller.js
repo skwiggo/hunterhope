@@ -3,7 +3,6 @@ angular.module('hunterHope').controller('TourCtrl', ["$scope", "$http", function
       .then(function(response) {
           $scope.tourDates = response.data;
       });
-      $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
     }  
   ]);
 
