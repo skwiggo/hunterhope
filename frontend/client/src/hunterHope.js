@@ -1,5 +1,6 @@
 var angular = require('angular');
-var uirouter = require('angular-ui-router');
+var UIRouter = require('angular-ui-router');
+// var map = require('angular-google-maps')
 
 angular.module('hunterHope', ['ui.router'])
 .config([

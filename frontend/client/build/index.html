@@ -3,6 +3,7 @@
   <head>
     <title>Hunter/Hope</title>
     <script src="bundle.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
   </head>
   
   <body ng-app="hunterHope">
@@ -45,6 +46,8 @@
         <ul>Venue: {{date.venue}}</ul>
         <ul>With: {{date.otherbands}}</ul>
       </li>
+
+      <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
     </div>
   </script>
  

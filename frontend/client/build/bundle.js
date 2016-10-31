@@ -45,7 +45,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var angular = __webpack_require__(1);
-	var uirouter = __webpack_require__(4);
+	var UIRouter = __webpack_require__(4);
+	// var map = require('angular-google-maps')
 	
 	angular.module('hunterHope', ['ui.router'])
 	.config([
@@ -36485,6 +36486,7 @@
 	      .then(function(response) {
 	          $scope.tourDates = response.data;
 	      });
+	      $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 	    }  
 	  ]);
 	
