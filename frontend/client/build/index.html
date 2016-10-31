@@ -45,9 +45,11 @@
         <ul>Date: {{date.date}}</ul>
         <ul>Venue: {{date.venue}}</ul>
         <ul>With: {{date.otherbands}}</ul>
+        <ng-map id="map" center="[{{date.lat}}, {{date.long}}]"><marker position="{{date.lat}}, {{date.long}}">
+    </marker></ng-map>
       </li>
 
-      <ng-map id="map" center="[40.74, -74.18]"></ng-map>
+      
 
     </div>
   </script>
