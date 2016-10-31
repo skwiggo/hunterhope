@@ -36481,20 +36481,19 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	angular.module('hunterHope').controller('TourCtrl', ["$scope", "$http", function($scope, $http) {
+	angular.module('hunterHope').controller('TourCtrl', ["$scope", "$http", 'NgMap', function($scope, $http, NgMap) {
 	      $http.get("http://localhost:5000/tourdates")
 	      .then(function(response) {
 	          $scope.tourDates = response.data;
 	      })
-	      $scope.map = function(NgMap) {
-	        NgMap.getMap().then(function(map) {
-	        console.log(map.getCenter());
-	        console.log('markers', map.markers);
-	        console.log('shapes', map.shapes);
-	        })
-	      }   
+	        $scope.map = NgMap.getMap('map')
+	        $scope.redraw = function() {
+	          google.maps.event.trigger($scope.map,'resize')
+	        }
 	    }
 	  ]);
+	
+	
 	
 	
 	
