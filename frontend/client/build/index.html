@@ -31,7 +31,7 @@
           <li ng-show="isSongListOpen" ng-repeat="song in release.songs">
             <ul ng-click="isSongOpen = !isSongOpen">{{song.name}}</ul>
             <ul ng-show="isSongOpen">Lyrics: {{song.lyrics}}</ul>
-            <ul ng-show="isSongOpen"><iframe ng-src="<https://embed.spotify.com/?uri=spotify:track:{{song.spotify}}" height="380" frameborder="0" allowtransparency="true"></iframe></ul>
+            <ul ng-show="isSongOpen"><iframe src="<https://embed.spotify.com/?uri=spotify:track:{{song.spotify}}" height="380" frameborder="0" allowtransparency="true"></iframe></ul>
             <ul ng-show="isSongOpen"><a href="{{song.itunes}}">Buy on iTunes</a></ul>
           </li>
       </li>
