@@ -46,9 +46,9 @@
 
 	var angular = __webpack_require__(1);
 	var UIRouter = __webpack_require__(4);
-	var ngMap = __webpack_require__(16);
+	var map = __webpack_require__(16);
 	
-	angular.module('hunterHope', ['ui.router'], ['ngMap'])
+	angular.module('hunterHope', ['ui.router', 'ngMap'])
 	.config([
 	'$stateProvider',
 	'$urlRouterProvider',
