@@ -3,6 +3,7 @@ angular.module('hunterHope').controller('MusicCtrl', ["$scope", "$http", functio
       .then(function(response) {
           $scope.releases = response.data; 
       });
+      $scope.mySong =  $sce.trustAsResourceUrl("https://embed.spotify.com/")
     }  
   ]);
 
