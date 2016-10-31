@@ -4,6 +4,8 @@ angular.module('hunterHope')
       .then(function(response) {
           $scope.tourDates = response.data;
       });
+      $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
     }  
+
   ]);
 

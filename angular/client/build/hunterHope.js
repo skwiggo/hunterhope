@@ -1,4 +1,4 @@
-angular.module('hunterHope', ['ui.router'], ['uiGmapgoogle-maps']) 
+angular.module('hunterHope', ['ui.router']) 
 .config([
 '$stateProvider',
 '$urlRouterProvider',
