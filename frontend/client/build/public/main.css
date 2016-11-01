@@ -96,3 +96,8 @@ body {
   margin-top: 200px;
   justify-content: center;
 }
+
+.hover:hover {
+  color: black;
+
+}
