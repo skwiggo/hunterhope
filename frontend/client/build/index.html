@@ -31,15 +31,19 @@
   <script type="text/ng-template" id="/music.html">
     <div class="music" ng-repeat="release in releases">
       <li >
-        <ul><div ng-click="isSongListOpen = !isSongListOpen">{{release.name}}</div></ul>
+        <ul ng-click="isSongListOpen = !isSongListOpen"><h4>{{release.name}}</h4></ul>
           <ul><img src="{{release.cover}}"></ul>
           <li ng-show="isSongListOpen" ng-repeat="song in release.songs">
-            <ul ng-click="isSongOpen = !isSongOpen">{{song.name}}</ul>
-            <ul ng-show="isSongOpen">Lyrics: {{song.lyrics}}</ul>
-            <ul ng-show="isSongOpen"><iframe ng-src="{{song.spotify | spotifyUrl}}" height="100" frameborder="0" allowtransparency="true"></iframe></ul>
-            <ul ng-show="isSongOpen"><a href="{{song.itunes}}">Buy on iTunes</a></ul>
+            
+            <div class="songs">
+              <ul ng-click="isSongOpen = !isSongOpen"><h4>{{song.name}}</h4></ul>
+              <ul ng-show="isSongOpen">Lyrics: {{song.lyrics}}</ul>
+              <ul ng-show="isSongOpen"><iframe ng-src="{{song.spotify | spotifyUrl}}" height="100" frameborder="0" allowtransparency="true"></iframe></ul>
+              <ul ng-show="isSongOpen"><a href="{{song.itunes}}">Buy on iTunes</a></ul>
+            </div>
+          
           </li>
-      </li>
+        </li>
       </div>
   
   </script>
