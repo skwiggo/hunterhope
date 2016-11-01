@@ -10,4 +10,6 @@ Instructions to run:
         - In terminal new tab: browse to client folder and run webpack -w
         - In terminal new tab: run node server.js
 
+3. Browser: localhost:3000
+
 
