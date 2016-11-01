@@ -6,6 +6,7 @@ Instructions to run:
         - In terminal: rake db:create, rake db:migrate and rake db:seed. 
         - In terminal new tab: run rails s -p 5000
 2. FrontEnd 
+        - Navigate to frontend folder in file directory
         - In terminal new tab: npm install to get all dependencies
         - In terminal new tab: browse to client folder and run webpack -w
         - In terminal new tab: run node server.js
