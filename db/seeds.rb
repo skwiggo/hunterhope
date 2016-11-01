@@ -21,7 +21,7 @@ Song.create({name: "Decade", lyrics: "We came from hope, a decade of scars acros
 Song.create({name: "Champion", lyrics: "When I become a Champion!", spotify: "6PDAhttbwhtQDDNsO4cPxk", itunes: "https://itunes.apple.com/us/album/decade-ep/id1057190368", release_id: release1.id, downloadable: nil})
 Song.create({name: "Shoebox", lyrics: "Its a miracle I met you at all.", spotify: "1rm718C8JRoO2Js7f2z5Bc", itunes: "https://itunes.apple.com/us/album/decade-ep/id1057190368", release_id: release1.id, downloadable: nil})
 Song.create({name: "Inside", lyrics: "Lets hold hands and pretend we're best friends.", spotify: "134G7RozlWR7zkcJKby4kF", itunes: "https://itunes.apple.com/us/album/decade-ep/id1057190368", release_id: release1.id, downloadable: nil})
-Song.create({name: "Weightloss", lyrics: "We all could fall harder than we should, and never know the cause.", spotify: nil, itunes: nil, release_id: release2.id, downloadable: nil}) 
+Song.create({name: "Weightloss", lyrics: "We all could fall harder than we should, and never know the cause.", spotify: nil, itunes: nil, release_id: release2.id, downloadable: "https://www.dropbox.com/s/hlfej1gtvd1bg6k/Hunter%2BHope-Weightlossguidetrackwithvocals.mp3?dl=1"}) 
 
 Tourdate.create({venue: "Sneaky Petes, Edinburgh", lat: 55.948318, long: -3.191512, otherbands: "Woes", date: "25th November 2016, 8pm" })
 Tourdate.create({venue: "PJ Molloys, Dunfermline", lat: 56.070396, long: -3.461226, otherbands: "The Dan Collins Band", date: "5th January 2017, 7pm" })
