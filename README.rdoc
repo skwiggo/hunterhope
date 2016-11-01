@@ -1,1 +1,13 @@
-A website for my band 'Hunter/Hope' using Angularjs for the front-end and Rails for the server-side API. 
+A website for my band 'Hunter/Hope' using Angularjs, Ruby on Rails and Bootstrap.
+
+Instructions to run:
+
+1. Rails 
+        - In terminal: rake db:create, rake db:migrate and rake db:seed. 
+        - In terminal new tab: run rails s -p 5000
+2. FrontEnd 
+        - In terminal new tab: npm install to get all dependencies
+        - In terminal new tab: browse to client folder and run webpack -w
+        - In terminal new tab: run node server.js
+
+
