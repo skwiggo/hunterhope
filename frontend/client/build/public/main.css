@@ -37,3 +37,9 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.links {
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
+}
