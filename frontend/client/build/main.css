@@ -1,4 +1,39 @@
+.jumbotron {
+  
+}
+
+.navbar-default {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+}
+
+h1 {
+  display: flex;
+  justify-content: center
+}
+
 #map { 
   height: 200px; 
   width: 200px;
+}
+
+body {
+  list-style: none;
+}
+
+.blog {
+  display: flex;
+  justify-content: center;
+}
+
+.music {
+  display: flex;
+  justify-content: center;
+}
+
+.tour {
+  display: flex;
+  justify-content: center;
 }
