@@ -49,7 +49,7 @@
       <li>
         <ul ng-click="showMap = !showMap">{{tourDate.venue}}, {{tourDate.date}}</ul>
         <ul>With: {{tourDate.otherbands}}</ul>
-        <div ng-if="showMap">
+        <div class="tourmap" ng-if="showMap">
           <ng-map id="map" center="[{{tourDate.lat}}, {{tourDate.long}}]">
           <marker position="{{tourDate.lat}}, {{tourDate.long}}"></marker>
           </ng-map>
