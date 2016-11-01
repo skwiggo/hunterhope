@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161030212435) do
+ActiveRecord::Schema.define(version: 20161101141908) do
 
   create_table "blogposts", force: :cascade do |t|
     t.text     "newpost"
@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 20161030212435) do
     t.text     "lyrics"
     t.string   "spotify"
     t.string   "itunes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "release_id"
+    t.text     "downloadable"
   end
 
   add_index "songs", ["release_id"], name: "index_songs_on_release_id"
