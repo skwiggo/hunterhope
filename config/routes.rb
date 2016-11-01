@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+	#Casein routes
+	namespace :casein do
+		resources :tourdates
+		resources :songs
+		resources :releases
+		resources :blogposts
+	end
+
   resources :blogposts
   resources :songs
   resources :tourdates

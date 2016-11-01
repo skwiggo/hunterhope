@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'jquery-ui-rails'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+# Content management system
+gem 'casein', '~>5.1.1'
 # Allow cross-origin resource sharing
 gem 'rack-cors', :require => 'rack/cors'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
