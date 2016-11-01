@@ -50,8 +50,8 @@
   <script type="text/ng-template" id="/tour.html">
     <div class ="tour" ng-repeat="tourDate in tourDates">
       <li>
-        <ul ng-click="showMap = !showMap"><h4>{{tourDate.venue}}, {{tourDate.date}}</h4></ul>
-        <ul ng-show="showMap">With: {{tourDate.otherbands}}</ul>
+        <ul ng-click="showMap = !showMap"><h2>{{tourDate.venue}}, {{tourDate.date}}</h2></ul>
+        <ul ng-show="showMap"><h3>With: {{tourDate.otherbands}}</h3></ul>
         <div class="tourmap" ng-if="showMap">
           <ng-map id="map" center="[{{tourDate.lat}}, {{tourDate.long}}]">
             <marker position="{{tourDate.lat}}, {{tourDate.long}}"></marker>

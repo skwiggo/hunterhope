@@ -15,8 +15,12 @@ a {
   color: black;
 }
 
-h4 {
+h2 {
   font-weight: bold;
+}
+
+p {
+  font-size: 25px;
 }
 
 li {
