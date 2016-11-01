@@ -5,10 +5,9 @@
 
 .jumbotron h1 {
   display: flex;
-  font-size: 100px;
+  font-size: 150px;
   color: black;
-  justify-content: center
-  
+  justify-content: center;
 }
 
 a {
@@ -36,12 +35,13 @@ ul {
 body {
   list-style: none;
   background: grey;
-  color: white;
+  color: #FFFFF3;;
   font-family: hunterhope;
 }
 
 .jumbotron {
   font-family: hunterhope;
+  background-color: #FFFFF3;;
 }
 
 .navbar-default {
@@ -49,7 +49,16 @@ body {
   justify-content: center;
   margin-bottom: 50px;
   font-family: hunterhope;
-  font-size: 30px;
+  background-color: #FFFFF3;
+}
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.navlink {
+  font-size: 50px;
 }
 
 .blog {
