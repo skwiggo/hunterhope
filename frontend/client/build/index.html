@@ -23,39 +23,38 @@
 
   <script type="text/ng-template" id="/blog.html">
     <div class="blog" ng-repeat="post in posts">
-      <h2>{{post.title}}</h2>
+      <h2>{{post.title}}</h2><br>
       <p>{{post.newpost}}</p>
+      <hr>
     </div>
   </script>
 
-  <script type="text/ng-template" id="/music.html">
-    <div class="music" ng-repeat="release in releases">
-      <li >
-        <ul ng-click="isSongListOpen = !isSongListOpen"><h4>{{release.name}}</h4></ul>
-          <ul><img src="{{release.cover}}"></ul>
-          <li ng-show="isSongListOpen" ng-repeat="song in release.songs">
-            
-            <div class="songs">
-              <ul ng-click="isSongOpen = !isSongOpen"><h4>{{song.name}}</h4></ul>
-              <ul ng-show="isSongOpen">Lyrics: {{song.lyrics}}</ul>
-              <ul ng-show="isSongOpen"><iframe ng-src="{{song.spotify | spotifyUrl}}" height="100" frameborder="0" allowtransparency="true"></iframe></ul>
-              <ul ng-show="isSongOpen"><a href="{{song.itunes}}">Buy on iTunes</a></ul>
-            </div>
-          
-          </li>
-        </li>
-      </div>
-  
-  </script>
+ <script type="text/ng-template" id="/music.html">
+   <div class="music" ng-repeat="release in releases">
+     <li>
+       <ul ng-click="isSongListOpen = !isSongListOpen"><h4>{{release.name}}</h4></ul>
+         <ul><img src="{{release.cover}}"></ul>
+         <li ng-show="isSongListOpen" ng-repeat="song in release.songs">
+           <div class="songs">
+             <ul ng-click="isSongOpen = !isSongOpen"><h4>{{song.name}}</h4></ul>
+             <ul ng-show="isSongOpen">Lyrics: {{song.lyrics}}</ul>
+             <ul ng-show="isSongOpen"><iframe ng-src="{{song.spotify | spotifyUrl}}" height="100" frameborder="0" allowtransparency="true"></iframe></ul>
+             <ul ng-show="isSongOpen"><a href="{{song.itunes}}">Buy on iTunes</a></ul>
+           </div> 
+         </li>
+       </li>
+     </div>
+ 
+ </script>
 
   <script type="text/ng-template" id="/tour.html">
     <div class ="tour" ng-repeat="tourDate in tourDates">
       <li>
-        <ul ng-click="showMap = !showMap">{{tourDate.venue}}, {{tourDate.date}}</ul>
-        <ul>With: {{tourDate.otherbands}}</ul>
+        <ul ng-click="showMap = !showMap"><h4>{{tourDate.venue}}, {{tourDate.date}}</h4></ul>
+        <ul ng-show="showMap">With: {{tourDate.otherbands}}</ul>
         <div class="tourmap" ng-if="showMap">
           <ng-map id="map" center="[{{tourDate.lat}}, {{tourDate.long}}]">
-          <marker position="{{tourDate.lat}}, {{tourDate.long}}"></marker>
+            <marker position="{{tourDate.lat}}, {{tourDate.long}}"></marker>
           </ng-map>
         </div>
       </li>
