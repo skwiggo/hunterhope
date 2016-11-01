@@ -11,7 +11,7 @@ Song.delete_all()
 Tourdate.delete_all()
 Release.delete_all()
 
-Blogpost.create({title: "New tour dates announced!", newpost: "Check the tour section to see latest tour dates to see if we are coming to your city!"})
+Blogpost.create({title: "New tour dates announced!", newpost: "Check the tour section to see latest tour dates. See if we are coming to your city!"})
 Blogpost.create({title: "Coming Soon!", newpost: "Incoming news about future releases and tour dates imminent. Stay tuned!" })
 
 release1 = Release.create(name: "Decade EP.", cover: "http://www.wikimp3.org/covers/451-4514-4514166-292/hope-the-hunter-decade-ep-2015.jpg")
