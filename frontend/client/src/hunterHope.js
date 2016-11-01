@@ -1,3 +1,5 @@
+global.jQuery = require('jquery');
+var bootstrap = require('bootstrap');
 var angular = require('angular');
 var UIRouter = require('angular-ui-router');
 var map = require('ngmap');
