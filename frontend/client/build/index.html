@@ -33,7 +33,7 @@
    <div class="music" ng-repeat="release in releases">
      <li>
        <ul class="hover" ng-click="isSongListOpen = !isSongListOpen"><h2>{{release.name}}</h2></ul>
-         <ul><img src="{{release.cover}}"></ul>
+         <ul><img src="{{release.cover}}" height="200px" width="200px"></ul>
          <li ng-show="isSongListOpen" ng-repeat="song in release.songs">
            <div class="songs">
              <ul class="hover" ng-click="isSongOpen = !isSongOpen"><h2>{{song.name}}</h2></ul>
