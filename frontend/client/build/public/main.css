@@ -129,12 +129,12 @@ body {
 }
 
 .photos {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 }
 
 .invphoto {
-  padding: 30px 30px 30px 30px;
+  padding: 20px 20px 20px 20px;
 }
 
 #map { 
