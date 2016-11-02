@@ -1,3 +1,5 @@
+var webpack = require('webpack')
+
 config = {
   entry: "./src/hunterHope.js",
   output: {
