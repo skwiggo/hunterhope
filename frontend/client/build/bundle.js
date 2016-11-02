@@ -77,6 +77,13 @@
 	      controller: 'TourCtrl'
 	    });
 	
+	    $stateProvider
+	      .state('photos', {
+	        url: '/photos',
+	        templateUrl: '/photos.html',
+	        controller: 'PhotosCtrl'
+	      });
+	
 	  $urlRouterProvider.otherwise('blog');
 	}])
 	
@@ -89,6 +96,7 @@
 	__webpack_require__(19);
 	__webpack_require__(20);
 	__webpack_require__(21);
+	__webpack_require__(22);
 	
 	
 	
@@ -52489,6 +52497,18 @@
 	
 	
 
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	angular.module('hunterHope').controller('PhotosCtrl', ["$scope", "$http", function($scope, $http) {
+	      $http.get("http://localhost:5000/photos")
+	      .then(function(response) {
+	          $scope.posts = response.data;
+	      });
+	    }  
+	  ]);
 
 /***/ }
 /******/ ]);

@@ -31,6 +31,13 @@ function($stateProvider, $urlRouterProvider) {
       controller: 'TourCtrl'
     });
 
+    $stateProvider
+      .state('photos', {
+        url: '/photos',
+        templateUrl: '/photos.html',
+        controller: 'PhotosCtrl'
+      });
+
   $urlRouterProvider.otherwise('blog');
 }])
 
@@ -43,5 +50,6 @@ function($stateProvider, $urlRouterProvider) {
 require("./blogcontroller");
 require("./musiccontroller");
 require("./tourcontroller");
+require("./photocontroller");
 
 
