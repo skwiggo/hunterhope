@@ -107,6 +107,17 @@ body {
   font-size: 20px;
 }
 
+.photos {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.invphoto {
+  padding: 20px 20px 20px 20px;
+}
+
 #map { 
   height: 200px; 
   width: 200px;
@@ -115,8 +126,8 @@ body {
 .links {
   display: flex;
   flex-direction: row;
-  margin-top: 100px;
   justify-content: center;
+  margin-top: 100px;
 }
 
 .hover:hover {
