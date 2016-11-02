@@ -18,6 +18,7 @@
       <li><a class="navlink" ui-sref="blog">Blog</a></li>
       <li><a class="navlink" ui-sref="music">Music</a></li> 
       <li><a class="navlink" ui-sref="tour">Tour</a></li>
+      <li><a class="navlink" ui-sref="media">Photos</a></li>
     </ul>
   </nav>
 
@@ -61,7 +62,12 @@
           </ng-map>
         </div>
       </li>
+    </div>
+  </script>
 
+  <script type="text/ng-template" id="/photos.html">
+    <div class="photos" ng-repeat="photo in photos">
+      <img ng-src="{{photo.url}}"></img>
     </div>
   </script>
  
