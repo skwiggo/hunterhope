@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101161116) do
+ActiveRecord::Schema.define(version: 20161102112331) do
 
   create_table "blogposts", force: :cascade do |t|
     t.text     "newpost"
@@ -40,6 +40,12 @@ ActiveRecord::Schema.define(version: 20161101161116) do
     t.string   "time_zone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "url"
   end
 
   create_table "releases", force: :cascade do |t|
