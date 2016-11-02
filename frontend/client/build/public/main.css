@@ -83,9 +83,17 @@ body {
   align-items: center;
 }
 
-.music {
+/*.music {
   display: flex;
-  margin-right: 60px;
+  
+  flex-direction: column;
+  align-items: center;
+  padding: 1px, 1px, 1px, 20px;
+}*/
+
+.releases {
+  display: flex;
+  margin-right: 70px;
   flex-direction: column;
   align-items: center;
   padding: 1px, 1px, 1px, 20px;
@@ -103,6 +111,7 @@ body {
 }
 
 .download {
+  margin: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,7 +154,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .hover:hover {
