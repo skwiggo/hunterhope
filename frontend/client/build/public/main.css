@@ -83,14 +83,6 @@ body {
   align-items: center;
 }
 
-/*.music {
-  display: flex;
-  
-  flex-direction: column;
-  align-items: center;
-  padding: 1px, 1px, 1px, 20px;
-}*/
-
 .releases {
   display: flex;
   margin-right: 70px;
