@@ -107,10 +107,14 @@ body {
   font-size: 20px;
 }
 
-.photos {
+.photoparent {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
+}
+
+.photos {
+  width: 400px;
+  height: 400px;
 }
 
 .invphoto {
