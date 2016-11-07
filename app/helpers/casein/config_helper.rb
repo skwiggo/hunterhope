@@ -14,9 +14,9 @@ module Casein
     # The server hostname where Casein will run
     def casein_config_hostname
       if Rails.env.production?
-        'http://www.caseincms.com'
+        'https://sheltered-fjord-80898.herokuapp.com/'
       else
-        'http://localhost:5000'
+        'https://sheltered-fjord-80898.herokuapp.com/'
       end
     end
 
