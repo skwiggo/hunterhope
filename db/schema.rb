@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20161102112331) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "blogposts", force: :cascade do |t|
     t.text     "newpost"
     t.datetime "created_at", null: false
@@ -66,7 +69,7 @@ ActiveRecord::Schema.define(version: 20161102112331) do
     t.text     "downloadable"
   end
 
-  add_index "songs", ["release_id"], name: "index_songs_on_release_id"
+  add_index "songs", ["release_id"], name: "index_songs_on_release_id", using: :btree
 
   create_table "tourdates", force: :cascade do |t|
     t.string   "venue"
@@ -78,4 +81,5 @@ ActiveRecord::Schema.define(version: 20161102112331) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "songs", "releases"
 end
