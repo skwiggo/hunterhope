@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'sendgrid-ruby'
 gem 'rails_12factor'
 gem 'jquery-ui-rails'
 # Use jquery as the JavaScript library
