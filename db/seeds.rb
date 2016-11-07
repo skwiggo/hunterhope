@@ -21,7 +21,7 @@ Song.create({name: "Champion", lyrics: "When I become a Champion!", spotify: "6P
 Song.create({name: "Shoebox", lyrics: "Its a miracle I met you at all.", spotify: "1rm718C8JRoO2Js7f2z5Bc", itunes: "https://itunes.apple.com/us/album/decade-ep/id1057190368", release_id: release1.id, downloadable: nil})
 Song.create({name: "Inside", lyrics: "Lets hold hands and pretend we're best friends.", spotify: "134G7RozlWR7zkcJKby4kF", itunes: "https://itunes.apple.com/us/album/decade-ep/id1057190368", release_id: release1.id, downloadable: nil})
 
-Tourdate.create({venue: "Sneaky Petes, Edinburgh", lat: 55.948318, long: -3.191512, otherbands: "Woes", date: "25th November 2016, 8pm" })
+Tourdate.create({venue: "TBC, Edinburgh", lat: 55.948318, long: -3.191512, otherbands: "Woes", date: "25th November 2016, 8pm" })
 
 Photo.create({url: "https://scontent.xx.fbcdn.net/v/t1.0-0/c0.4.206.206/p206x206/13895063_1182652308465319_8425633379881185214_n.jpg?oh=19d205286528ddb35f3b747551a74262&oe=58D56F24"})
 Photo.create({url: "https://scontent.xx.fbcdn.net/v/t1.0-0/c0.0.206.206/p206x206/11899939_986227681441117_6833868747648542603_n.jpg?oh=d2ca756f2f120fed786953cbdc2c81a9&oe=58A31DA0"})
