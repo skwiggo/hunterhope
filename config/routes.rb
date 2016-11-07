@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 		resources :blogposts
 	end
 
+  root :blogposts
   resources :blogposts
   resources :songs
   resources :tourdates
