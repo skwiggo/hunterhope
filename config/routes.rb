@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+root 'blogposts_controller#index'
 	#Casein routes
 	namespace :casein do
 		resources :photos
